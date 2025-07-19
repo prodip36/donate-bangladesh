@@ -23,7 +23,7 @@ color: #B4F461;
 </head>
 <body >
     <!-- navbar section-->
-    <nav>
+    <nav class="sticky top-0 z-1 from-zinc-100 to-zinc-400 ">
     <div class="navbar bg-base-100 shadow-sm bg-[#F9F7F3] px-20 pb-10">
   <div class="navbar-start ">
     <a class="btn btn-ghost text-xl bg-[#B4F461]">Blog</a>
@@ -34,21 +34,23 @@ color: #B4F461;
   </div>
   <div class="navbar-end gap-2">
     <img src="./assets/coin.png" alt="">
-    <h3><span>5500</span> BDT</h3>
+    <h3><span id="balance-main">5500</span> BDT</h3>
   </div>
     </div>
     <div class="text-center mt-10">
-        <button class="btn bg-[#B4F461]">
+        <button id="btn-donation" class="btn bg-[#B4F461]">
     Donation
 </button>
-<button class="btn">
+<button id="btn-history" class="btn">
  History
 </button></div>
 <!-- <div class="divider"></div> -->
     </nav>
     <!-- main section -->
-     <main class="lg:mx-30 space-y-5">
-        <!-- card 1-->
+     <main class="lg:mx-30 space-y-5 ">
+        <!-- card section -->
+        <section id="container-donation" class="">
+                    <!-- card 1-->
     <div class="card card-side bg-base-100 shadow-sm mt-10 grid grid-cols-1 lg:grid-cols-2 gap-5 p-10">
         <!-- figure div -->
   <div>
@@ -61,13 +63,13 @@ color: #B4F461;
      <div class="justify-start mt-0">
       <button class="btn btn-deafult">
         <img src="./assets/coin.png" alt="">
-        <h4><span>0</span> BDT</h4>
+        <h4><span id="balance-noakhali">900</span> BDT</h4>
       </button>
     </div>
-    <h2 class="card-title font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
+    <h2 class="card-title font-bold text-xl">Donate for <span id="donate-noakhali-heading">Flood at Noakhali, Bangladesh</span></h2>
     <p class="text-base text-gray-500"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-   <input type="text" class="input w-full" placeholder="Write Donation Amount" />
-    <button class="btn btn-primary bg-[#B4F461] border-none text-black">Donate Now</button>
+   <input id="input-amount-noakhali" type="text" class="input w-full" placeholder="Write Donation Amount" />
+    <button id="donate-noakhali" class="btn btn-primary bg-[#B4F461] border-none text-black">Donate Now</button>
   </div>
 </div>
        <!-- card 2-->
@@ -89,7 +91,7 @@ color: #B4F461;
     <h2 class="card-title font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h2>
     <p class="text-base text-gray-500"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
    <input type="text" class="input w-full" placeholder="Write Donation Amount" />
-    <button class="btn btn-primary bg-[#B4F461] border-none text-black">Donate Now</button>
+    <button class=" btn btn-primary bg-[#B4F461] border-none text-black">Donate Now</button>
   </div>
 </div>
        <!-- card 3-->
@@ -114,10 +116,20 @@ color: #B4F461;
     <button class="btn btn-primary bg-[#B4F461] border-none text-black">Donate Now</button>
   </div>
 </div>
+        </section>
+        <!-- history section -->
+         <section id="container-history" class="hidden space-y-5 mt-10">
+            
+         </section>
      </main>
      <!-- footer section -->
       <footer>
 
       </footer>
+      <script src="./js/date-time.js"></script>
+      <script src="./js/feature.js"></script>
+     <script src="./js/utilities.js"></script>
+      <script src="./js/simple.js"></script>
+       
 </body>
 </html>
